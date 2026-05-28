@@ -1,0 +1,179 @@
+/* === RESET Y VARIABLES === */
+:root {
+  --color-primary: #236086;
+  --color-secondary: #e5e5e5;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-border: #236086;
+  --color-progress-bg: #e5e5e5;
+  --color-progress-bar: #236086;
+  --font-main: Arial, Helvetica, sans-serif;
+  --font-size-header: 2.2rem;
+  --font-size-subheader: 1.3rem;
+  --font-size-section: 1.5rem;
+  --font-size-aside-title: 1.3rem;
+  --font-size-base: 1rem;
+  --aside-width: 320px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  height: 100%;
+
+}
+
+/* === HEADER === */
+header {
+  width: 100vw;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.2rem 0 1.2rem 0;
+  text-align: left;
+  padding-left: 2.5vw;
+}
+header h1 {
+  font-size: var(--font-size-header);
+  font-weight: bold;
+  margin-bottom: 0.1em;
+}
+header p {
+  font-size: var(--font-size-subheader);
+  opacity: 0.95;
+}
+
+/* === LAYOUT === */
+main {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  background: var(--color-white);
+}
+section {
+  flex: 3 1 0;
+  padding: 1rem 2rem;
+
+}
+
+aside {
+  min-width: var(--aside-width);
+  max-width: var(--aside-width);
+  flex: 3 1 0;
+  background: var(--color-secondary);
+  height: 100%;
+}
+
+/* === TITULOS DE SECCION === */
+.section__title {
+  font-size: var(--font-size-section);
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-border);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* === EXPERIENCE === */
+#experience article {
+  margin-bottom: 1.5rem;
+}
+#experience h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+}
+#experience h4 {
+  font-size: 0.98rem;
+  font-weight: normal;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+#experience p {
+  font-size: var(--font-size-base);
+  color: #222;
+}
+
+/* === INFO ASIDE === */
+#info ul {
+  list-style: none;
+  padding: 0;
+}
+#info li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.98rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+#info li span {
+  font-size: 1.1em;
+}
+
+/* === SKILLS === */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.skill-item h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.skill-item progress {
+  width: 100%;
+  height: 0.9rem;
+  background: var(--color-progress-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  appearance: none;
+}
+.skill-item progress::-webkit-progress-bar {
+  background: var(--color-progress-bg);
+  border-radius: 6px;
+}
+.skill-item progress::-webkit-progress-value {
+  background: var(--color-progress-bar);
+  border-radius: 6px;
+}
+.skill-item progress::-moz-progress-bar {
+  background: var(--color-progress-bar);
+  border-radius: 6px;
+}
+
+/* === EDUCATION === */
+#education ul {
+  list-style: none;
+  margin: 2rem 0 0 0;
+  padding: 0;
+}
+#education li {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    max-width: 100vw;
+    min-width: 0;
+    width: 100vw;
+    margin-top: 1.5rem;
+  }
+  section {
+    min-height: unset;
+  }
+}
